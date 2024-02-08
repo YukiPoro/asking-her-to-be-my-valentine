@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./yes_style.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">yay <3 (thats what i thought)</h1>
+            </div>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Hidden Audio</title>
+                <style>
+                    .hidden-audio {
+                        position: absolute;
+                        left: -9999px;
+                    }
+                    .container {
+                        position: relative;
+                    }
+                    .gif_container {
+                        position: relative;
+                    }
+                    #heartButton {
+                        position: absolute;
+                        top: calc(100% + 20px); /* Position 20px below the bottom of the GIF container */
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100px; /* Adjust width as needed */
+                        height: 100px; /* Adjust height as needed */
+                        background: transparent url('heart.png') no-repeat center center; /* Image of heart */
+                        background-size: cover;
+                        border: none; /* No border */
+                        outline: none; /* No outline */
+                        cursor: pointer; /* Cursor style */
+                        opacity: 0.5; /* Semi-transparent */
+                        transition: opacity 0.3s ease; /* Smooth transition */
+                    }
+                    #heartButton:hover {
+                        opacity: 1; /* Fully opaque on hover */
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="gif_container">
+                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmtobHZqYjRneWxlOTMwdGltc2VhNWZkYzQxNmxlYXVyOGtsMG1xNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Wcil7wEpUX0CJVX3q9/giphy.gif" alt="Cute animated illustration">
+                    </div>
+            
+                    <audio id="hiddenAudio" class="hidden-audio" controls>
+                        <source src="your_audio_file.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+            
+                    <button id="heartButton" onclick="playAudio()" aria-label="Heart Button"></button> <!-- Heart button -->
+                </div>
+            
+                <script>
+                    function playAudio() {
+                        // Get the audio element
+                        var audio = document.getElementById("hiddenAudio");
+                        
+                        // Play the audio
+                        audio.play();
+                    }
+                </script>
+            </body>
+            </div>
+        </div>
+       
+    </body> 
+</html>
